@@ -26,4 +26,6 @@ Route::delete('logout', 'SessionsController@destroy')->name('logout');
 //statuses
 Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
 
+Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
+
 
